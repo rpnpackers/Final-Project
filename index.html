@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Walkability in the US</title>
+  </head>
+  <body>
+    <div class="container" id="bsr-wrapper">
+      <h1>Walkability in the US</h1>
+      <div class='my-5'>
+      <h2>Our Data</h2>
+      <p>
+            For this project we used the EPA's Smart Location Database which contains data based on the 2019 US census for individual blocks throughout the United States.
+            More specifically, walkability is calculated based on intersection density, the proximity to transit stops, employment mix, and household employment mix.
+            This database also contains individual data on population, land area, income, and other such factors which can be used to calculate further statistics.
+            <div class='my-5'>
+            1. How do states rank with respect to Walkability, and how does this compare to their rankings in other categories?
+            <div class='my-5'>
+            2. How does walkability differ betwwen cities with different climates?
+            <div class='my-5'>
+            3. Is there a geographical correlation between population density and walkability?
+            <div class='my-5'>
+            4. Is there a geographical correlation between low income and walkability?
+      </p>
+      <div class='my-5'>
+      <h2>Census Data Rankings by State</h2>
+      <iframe src="dens_rank.html" width="100%" height = "300" frameBorder="0"></iframe>
+      <p>
+        This plot compares the population density of each state. States with large cities, such as New York and California, tend to have a higher population density.
+      </p>
+      <iframe src="linc_rank.html" width="100%" height = "300" frameBorder="0"></iframe>
+      <p>
+        This plot compares the low income percentage of each state. The states with a higher low income percentage tend to be states with lower population, such as South Dakota and Montana.
+      </p>
+      <iframe src="pop_rank.html" width="100%" height = "300" frameBorder="0"></iframe>
+      <p>
+        This plot compares the absolute population of each state. There is a loose correlation between absolute population and population density.
+      </p>
+      <iframe src="walk_rank.html" width="100%" height = "300" frameBorder="0"></iframe>
+      <p>
+        This plot compares the average walkability in each state. States with a higher walkability index tend to also have a higher population density and absolute population.
+      </p>
+      <div class='my-5'>
+      <p>
+          When we combine the insights from the four vizualizations above, we are able to gather context for the graphs below. This helps us to see how each state compares.
+
+      </p>
+      <div class='my-5'>
+      <h2>Geographical Walkability Visualizations</h2>
+      <p>
+            The following tabs show how walkability varies throughout 5 different major US cities. This is juxtaposed with population density and low income percentages for 
+            those same areas. This allows you to see the differences in correlations between these variables in different cities. 
+      </p>
+      <iframe src="maps.html", width="100%" height="750" frameBorder="0"></iframe>
+      <div class='my-5'>
+      <h2>Conclusions</h2>
+      <p>
+            In summary, we can use these visualizations to see both how sates rank with respect to walkability and other major statistics, and how different major cities approach
+            walkability. In the real world, this could be used to better inform city development and resource allocation to pedestrian projects. 
+            <div class='my-5'>
+              1. Our rankings suggest that states with higher population densities, higher income, and larger total populations, generally have greater walkability ratings when considering
+              the entire state.
+            <div class='my-5'>
+              2. In cities with warmer climates like Los Angeles, walkability is more evenly distributed among areas of varying income while in colder cities like Minneapolis or Chicago
+              walkability is more tied to income. 
+              <div class='my-5'>
+              3. There is a strong correlation between population density and walkability as shown by our chloropleths. This makes sense because if more people live in one area, 
+              then there will likely be more resource within a walkable distance. 
+              <div class='my-5'>
+              4. Our geographical data suggests that in cities, as low income percentage increases, walkability generally increases as well. 
+
+
+      </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
